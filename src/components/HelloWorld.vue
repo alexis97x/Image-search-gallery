@@ -8,7 +8,7 @@
     const text = ref('URL copied to clipboard!')
     const snackbar = ref(false)
     const noResults = ref(false)
-    const client_id = //your token or client_id or access key idk what its called
+    const client_id = 'BDbuN5JWCythjbqtFarcWoiuRtnR202MSw8vAlJEmxk'
 
     const searchImage = () => {
         axios.get(`https://api.unsplash.com/search/photos?page=1&query=${search.value}&client_id=${client_id}`)
@@ -75,7 +75,7 @@
             v-model="snackbar">
             {{ text }}
             <template v-slot:actions>
-                <v-btn color="pink" variant="text" @click="snackbar = false">Close</v-btn>
+                <v-btn color="orange" variant="text" @click="snackbar = false">Close</v-btn>
             </template>
         </v-snackbar>
 
